@@ -14,11 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        \App\Models\User::factory()->create([
+            'name' => 'jb',
+            'fullname' => 'Joona Brückner',
+            'email' => 'test@example.com',
+        ]);
+        \App\Models\Post::factory()->create([
+            'author' => 'jb',
+            'content' => "this is a test"
+        ]);
     }
 }
