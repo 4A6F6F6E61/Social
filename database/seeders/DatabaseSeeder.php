@@ -15,13 +15,16 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         \App\Models\User::factory()->create([
-            'name' => 'jb',
+            'name' => 'admin',
             'fullname' => 'Joona Brückner',
-            'email' => 'test@example.com',
+            'email' => 'joona.brueckner@gmail.com',
         ]);
         \App\Models\Post::factory()->create([
-            'author' => 'jb',
+            'author' => 'admin',
             'content' => "this is a test"
+        ]);
+        \App\Models\Post::factory(10)->create([
+            'author' => 'admin',
         ]);
     }
 }

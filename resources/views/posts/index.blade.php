@@ -5,4 +5,7 @@
     @foreach($posts as $post)
         <x-postcard :post="$post"/>
     @endforeach
+    <div class="mt-6 p-4">
+        {{$posts->links()}}
+    </div>
 </x-layout>
