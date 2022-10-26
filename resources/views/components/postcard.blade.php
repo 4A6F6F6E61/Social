@@ -1,9 +1,9 @@
 @props(['post'])
 
-<?php
-use \App\Models\User;
-$user = User::query()->where('name', "=", $post->author)->first();
-?>
+@php
+    use \App\Models\User;
+    $user = User::query()->where('name', "=", $post->author)->first();
+@endphp
 
 @if ($user ?? false)
 <div class="bg-white w-full mx-auto p-5 text-gray-800 shadow hover:bg-gray-50 border-transparent hover:border-laravel focus:outline-none border-l-4" style="max-width: 600px">
