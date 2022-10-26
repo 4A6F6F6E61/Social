@@ -27,8 +27,10 @@
         <title>Social</title>
 </head>
 <body>
+    <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
     @include('partials._nav')
     {{$slot}}
+    </div>
 </body>
 </html>
 

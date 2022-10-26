@@ -6,7 +6,7 @@ $user = User::query()->where('name', "=", $post->author)->first();
 ?>
 
 @if ($user ?? false)
-<div class="bg-white w-full mx-auto rounded-lg p-5 text-gray-800 shadow" style="max-width: 600px">
+<div class="bg-white w-full mx-auto p-5 text-gray-800 shadow hover:bg-gray-50 border-transparent hover:border-laravel focus:outline-none border-l-4" style="max-width: 600px">
     <div class="w-full flex mb-4">
         <div class="overflow-hidden rounded-full w-12 h-12">
             <img
