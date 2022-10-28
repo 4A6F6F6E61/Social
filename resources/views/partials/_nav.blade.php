@@ -1,6 +1,6 @@
-<div class="fixed flex flex-col top-0 left-0 w-64 bg-white h-full border-r">
-    <div class="flex items-center justify-center h-14 border-b">
-    <div>Social</div>
+<div class="fixed flex flex-col top-0 left-0 lg:w-64 bg-white dark:bg-neutral-900 h-full border-r w-16 dark:border-neutral-800">
+    <div class="flex items-center justify-center h-14 border-b dark:border-neutral-800">
+    <div class="dark:text-gray-200">Social</div>
     </div>
     <div class="overflow-y-auto overflow-x-hidden flex-grow">
     <ul class="flex flex-col py-4 space-y-1">
@@ -26,6 +26,12 @@
                 <x-nav.item link="/settings/test" name="Test" />
             </ul>
             <x-nav.item link="/logout" name="Logout" path="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+        </x-nav.section>
+        @endauth
+        @guest
+        <x-nav.section name="Auth">
+            <x-nav.item link="/login" name="Login" path="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            <x-nav.item link="/register" name="Register" path="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
         </x-nav.section>
         @endguest
     </ul>

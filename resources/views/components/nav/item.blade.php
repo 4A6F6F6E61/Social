@@ -1,6 +1,6 @@
 @props(['link', 'name', 'path'])
 <li>
-    <a href="{{$link}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-laravel pr-6">
+    <a href="{{$link}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200 dark:hover:bg-black border-l-4 border-transparent hover:border-laravel pr-6">
         <span class="inline-flex justify-center items-center ml-4">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 @isset($path)
@@ -9,6 +9,6 @@
                 @endif
             </svg>
         </span>
-        <span class="ml-2 text-sm tracking-wide truncate">{{$name}}</span>
+        <span class="ml-2 text-sm tracking-wide truncate hidden lg:block">{{$name}}</span>
     </a>
 </li>

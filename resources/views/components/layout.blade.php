@@ -19,6 +19,9 @@
                     extend: {
                         colors: {
                             laravel: "#ef3b2d",
+                            darkbg: "#1b1d1e",
+                            cardbg: "#181a1b",
+                            cardhoverbg: "#1b1d1e",
                         },
                     },
                 },
@@ -27,7 +30,7 @@
         <title>Social</title>
 </head>
 <body>
-    <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
+    <div class="min-h-screen flex flex-auto flex-shrink-0 antialiased bg-gray-50 text-grey-800 dark:bg-darkbg flex-row w-full h-100vh">
     @include('partials._nav')
     {{$slot}}
     </div>
